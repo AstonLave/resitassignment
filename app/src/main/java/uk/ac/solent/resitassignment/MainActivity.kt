@@ -1,5 +1,4 @@
 package uk.ac.solent.resitassignment
-
 import android.content.Context
 import android.hardware.Sensor
 import android.hardware.SensorEvent
@@ -28,7 +27,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        image = findViewById(R.id.imageViewCompass) as ImageView
+        image = findViewById(R.id.image1) as ImageView
 
         val sMgr = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         accel = sMgr.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
@@ -48,7 +47,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         sensorManager.unregisterListener(this, magnetSet)
 
     }
-    /* https://github.com/andreas-mausch/compass/blob/master/app/src/main/java/de/neonew/compass/MainActivity.kt */
+
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
 
     }
